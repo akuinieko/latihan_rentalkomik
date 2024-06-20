@@ -41,39 +41,39 @@
                         $result = mysqli_query($conn, "SELECT * FROM komik ORDER BY kd_komik ASC");
                         $nomor = 1;
                         foreach ($result as $val) {
-                        ?>
+                            ?>
 
-                        <tr>
-                            <td class="text-center">
-                                <?= $nomor++; ?>
-                            </td>
-                            <td class="text-center">
-                                <?= $val['kd_komik']; ?>
-                            </td>
-                            <td>
-                                <?= $val['judul']; ?>
-                            </td>
-                            <td>
-                                <?= $val['pengarang']; ?>
-                            </td>
-                            <td>
-                                <?= $val['penerbit']; ?>
-                            </td>
-                            <td class="text-center">
-                                <?= $val['harga']; ?>
-                            </td>
+                            <tr>
+                                <td class="text-center">
+                                    <?= $nomor++; ?>
+                                </td>
+                                <td class="text-center">
+                                    <?= $val['kd_komik']; ?>
+                                </td>
+                                <td>
+                                    <?= $val['judul']; ?>
+                                </td>
+                                <td>
+                                    <?= $val['pengarang']; ?>
+                                </td>
+                                <td>
+                                    <?= $val['penerbit']; ?>
+                                </td>
+                                <td class="text-center">
+                                    <?= $val['harga']; ?>
+                                </td>
 
-                            <td class="text-center">
-                                <a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"
-                                    href="?page=komikEdit&id=<?= $val['kd_komik']; ?>"
-                                    class="btn btn-sm btn-warning">Edit</a>
+                                <td class="text-center">
+                                    <a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit"
+                                        href="?page=komikEdit&id=<?= $val['kd_komik']; ?>"
+                                        class="btn btn-sm btn-warning">Edit</a>
 
-                                <a href="?page=komikDelete&id=<?= $val['kd_komik']; ?>" class="btn btn-sm btn-danger"
-                                    onclick="return confirm('Yakin ingin menghapus data ini ?');"
-                                    data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Hapus">Delete</a>
-                            </td>
-                        </tr>
-                        <?php
+                                    <a href="?page=komikDelete&id=<?= $val['kd_komik']; ?>" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Yakin ingin menghapus data ini ?');"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Hapus">Delete</a>
+                                </td>
+                            </tr>
+                            <?php
                         }
                         ?>
                     </table>

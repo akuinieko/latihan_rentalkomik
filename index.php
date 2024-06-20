@@ -42,6 +42,21 @@ include "koneksi.php";
                     <li class="nav-item">
                         <a class="nav-link" href="?page=transaksi">Transaksi</a>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Soal
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Soal 1</a></li>
+                            <li><a class="dropdown-item" href="#">Soal 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -64,12 +79,32 @@ include "koneksi.php";
                     include "komik.php";
                     break;
 
+                case 'komikAdd':
+                    include "komikAdd.php";
+                    break;
+
+                case 'komikEdit':
+                    include "komikEdit.php";
+                    break;
+
+                case 'komikDelete':
+                    include "komikDelete.php";
+                    break;
+
                 case 'member':
                     include "member.php";
                     break;
 
                 case 'transaksi':
                     include "transaksi.php";
+                    break;
+
+                case 'soal1':
+                    include "soal1.php";
+                    break;
+
+                case 'soal2':
+                    include "soal2.php";
                     break;
 
                 default:
@@ -90,12 +125,12 @@ include "koneksi.php";
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- tooltip -->
     <script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 
     <!-- data tables -->
@@ -112,15 +147,15 @@ include "koneksi.php";
 
     <!-- data tables -->
     <script>
-    new DataTable('#tabel', {
-        ordering: false,
-        responsive: true,
-        select: true,
-        searching: false,
-        layout: {
-            topStart: null
-        }
-    });
+        new DataTable('#tabel', {
+            ordering: false,
+            responsive: true,
+            select: true,
+            searching: false,
+            layout: {
+                topStart: null
+            }
+        });
     </script>
 
 </body>
