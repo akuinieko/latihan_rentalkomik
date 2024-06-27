@@ -49,8 +49,8 @@ include "koneksi.php";
                             Soal
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Soal 1</a></li>
-                            <li><a class="dropdown-item" href="#">Soal 2</a></li>
+                            <li><a class="dropdown-item" href="?page=soal1">Soal 1</a></li>
+                            <li><a class="dropdown-item" href="?page=soal2">Soal 2</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -125,12 +125,12 @@ include "koneksi.php";
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    </script>
 
     <!-- tooltip -->
     <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 
     <!-- data tables -->
@@ -147,15 +147,15 @@ include "koneksi.php";
 
     <!-- data tables -->
     <script>
-        new DataTable('#tabel', {
-            ordering: false,
-            responsive: true,
-            select: true,
-            searching: false,
-            layout: {
-                topStart: null
-            }
-        });
+    new DataTable('#tabel', {
+        ordering: false,
+        responsive: true,
+        select: true,
+        searching: false,
+        layout: {
+            topStart: null
+        }
+    });
     </script>
 
 </body>
