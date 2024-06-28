@@ -51,10 +51,11 @@ include "koneksi.php";
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="?page=soal1">Soal 1</a></li>
                             <li><a class="dropdown-item" href="?page=soal2">Soal 2</a></li>
+                            <li><a class="dropdown-item" href="?page=soal3">Soal 3</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="?page=soal4">Soal 4</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -107,6 +108,14 @@ include "koneksi.php";
                     include "soal2.php";
                     break;
 
+                case 'soal3':
+                    include "soal3.php";
+                    break;
+
+                case 'soal4':
+                    include "soal4.php";
+                    break;
+
                 default:
                     include "404.php";
                     break;
@@ -152,6 +161,29 @@ include "koneksi.php";
         responsive: true,
         select: true,
         searching: false,
+        layout: {
+            topStart: null
+        }
+    });
+
+    // null top-start & no searching
+    new DataTable('#tabel2', {
+        ordering: false,
+        responsive: true,
+        select: true,
+        searching: false,
+        layout: {
+            topStart: null
+        }
+    });
+
+    // null top-start & no searching & no pages
+    new DataTable('#tabel3', {
+        ordering: false,
+        responsive: true,
+        select: true,
+        searching: false,
+        paging: false,
         layout: {
             topStart: null
         }
